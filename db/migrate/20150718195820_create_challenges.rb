@@ -5,7 +5,7 @@ class CreateChallenges < ActiveRecord::Migration
       t.string :description
       t.string :image
       t.string :video
-      t.int :category_id
+      t.integer :category_id
 
       t.timestamps null: false
     end

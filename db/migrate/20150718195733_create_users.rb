@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :username
       t.string :password_digest
       t.string :role
-      t.long :points
+      t.integer :points
       t.string :image
 
       t.timestamps null: false
