@@ -6,6 +6,7 @@ class CreateChallenges < ActiveRecord::Migration
       t.string :image
       t.string :video
       t.integer :category_id
+      t.integer :bounty_total
 
       t.timestamps null: false
     end
