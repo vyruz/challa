@@ -28,7 +28,7 @@ class ChallengesController < ApplicationController
   def show
     image = Image.where('challenge_id': @challenge.id).first
     if image
-      @challenge.image_path = "assets/" + image.filename
+      @challenge.image_path = "/assets/" + image.filename
       if @category
         render "show", :locals => {:category_name => @category.name}
       end
