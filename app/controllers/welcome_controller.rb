@@ -7,5 +7,8 @@ class WelcomeController < ApplicationController
     end
   end
   def show
+    @user = User.where(id: session[:user_id]).first
+    @challenges = Challenge.all
+    @user_challenges = Challenge.where(user_id: @user.id)
   end
 end

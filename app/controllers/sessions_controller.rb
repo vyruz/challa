@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  before_action :set_session, only: [:show, :edit, :update, :destroy]
 
   # GET /sessions/new
   def new
@@ -18,6 +17,8 @@ class SessionsController < ApplicationController
   # DELETE /sessions/1
   # DELETE /sessions/1.json
   def destroy
+    session[:user_id] = nil
+    redirect_to root_url(notice: "You have successfully signed out")
   end
 
     # Never trust parameters from the scary internet, only allow the white list through.

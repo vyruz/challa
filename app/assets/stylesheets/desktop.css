@@ -1,3 +1,6 @@
+$gold: #FFB612;
+$burgundy: #773141;
+
 html {
     margin: 0;
     padding: 0;
@@ -45,7 +48,7 @@ body::after {
     margin-right: 0 auto;
     height: 500px;
     width: 600px;
-    padding-top: 10px;
+    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -84,4 +87,8 @@ body::after {
     color: #A00020;
     background-color: rgba(100,100,100, 0.5);
 
+}
+
+.logIn {
+    color: $burgundy;
 }

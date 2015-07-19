@@ -3,10 +3,8 @@ class CreateChallenges < ActiveRecord::Migration
     create_table :challenges do |t|
       t.string :name
       t.string :description
-      t.string :image
-      t.string :video
+      t.integer :image_id
       t.integer :category_id
-      t.integer :bounty_total
 
       t.timestamps null: false
     end

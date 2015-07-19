@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :username
       t.string :password_digest
-      t.string :role
+      t.string :role, :default => "challenger"
       t.integer :points, :default => 0
       t.string :image
 
