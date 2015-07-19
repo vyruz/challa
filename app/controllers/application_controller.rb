@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id])
   end
   helper_method :current_user
+  def random_challenge
+    @random_challenge = Challenge.order("RANDOM()").first
+  end
+  helper_method :random_challenge
   protected
     def authenticate
       user = User.where(id: session[:user_id]).first
