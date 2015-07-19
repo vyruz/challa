@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   match '/logout', to: 'sessions#destroy',     via: 'delete'
   match '/home', to: 'welcome#show',           via: 'get'
   resources :users
-  resources :challenges
+  resources :challenges   
   resources :categories do
     resources :challenges
   end

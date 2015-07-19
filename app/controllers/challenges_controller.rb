@@ -28,6 +28,9 @@ class ChallengesController < ApplicationController
   def edit
   end
 
+  def accept
+  end
+
   # POST /challenges
   # POST /challenges.json
   def create
