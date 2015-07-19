@@ -11,6 +11,7 @@ body {
     height: 100%;
     width: 100%;
     line-height: default;
+    padding-top: 60px;
 }
 
 body::after {
