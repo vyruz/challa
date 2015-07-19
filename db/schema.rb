@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150718195820) do
+ActiveRecord::Schema.define(version: 20150718231316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bounties", force: :cascade do |t|
+    t.integer  "challenge_id"
+    t.integer  "user_id"
+    t.integer  "points"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -30,6 +38,11 @@ ActiveRecord::Schema.define(version: 20150718195820) do
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "user_challenges", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
