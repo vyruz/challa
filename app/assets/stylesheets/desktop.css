@@ -20,7 +20,7 @@ body::after {
     bottom: 0;
     right: 0;
     left: 0;
-    background: url('/images/tightrope.jpg');
+    background: url('/assets/tightrope.jpg');
     background-size: cover;
     opacity: 0.4;
     z-index: -1;
@@ -42,12 +42,16 @@ body::after {
     margin-bottom: -75px;
     margin-left: 0 auto;
     margin-right: 0 auto;
+    height: 500px;
+    width: 600px;
 }
 
 .blurb {
+    position: absolute;
+    bottom: 30%;
     width: 100%;
     font-size: 300%;
-    color: #555555;
+    color: #333377;
     text-align: center;
     display: block;
     margin: 0 auto;
@@ -55,6 +59,8 @@ body::after {
 }
 
 .buttonHolder {
+    position: absolute;
+    bottom: 10%;
     width: 100%;
     padding-top: 50px;
     display: block;
@@ -62,7 +68,9 @@ body::after {
     text-align: center;
 }
 
-.buttonHolder button {
+.buttonHolder a {
+    font-weight: bold;
+    text-decoration: none;
     font-size: 200%;
     border-radius: 5px;
     border: 5px solid black;
@@ -70,4 +78,7 @@ body::after {
     padding-left: 20px;
     padding-bottom: 10px;
     padding-top: 10px;
+    color: #A00020;
+    background-color: rgba(100,100,100, 0.5);
+
 }
