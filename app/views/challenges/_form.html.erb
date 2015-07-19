@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+<center>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -21,12 +22,9 @@
   </div>
   <div class="field">
     <%= f.label :image %><br>
-    <%= f.text_field :image %>
+    <%= f.text_field :image_path %>
   </div>
-  <div class="field">
-    <%= f.label :video %><br>
-    <%= f.text_field :video %>
-  </div>
+
   <div class="field">
     <%= f.label :category_id %><br>
     <%= f.text_field :category_id %>
@@ -34,4 +32,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</center>
 <% end %>
