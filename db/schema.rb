@@ -36,8 +36,9 @@ ActiveRecord::Schema.define(version: 20150718231316) do
     t.string   "image"
     t.string   "video"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "bounty_total"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "user_challenges", force: :cascade do |t|
@@ -50,10 +51,10 @@ ActiveRecord::Schema.define(version: 20150718231316) do
     t.string   "username"
     t.string   "password_digest"
     t.string   "role"
-    t.integer  "points"
+    t.integer  "points",          default: 0
     t.string   "image"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end
