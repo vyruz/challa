@@ -1,3 +1,6 @@
+$gold : #FFB612;
+$burgundy : #773141;
+
 h1 {
   padding-top: 3em;
   margin-left: auto;
@@ -12,7 +15,6 @@ h1 {
   padding: 2em;
   border-radius: 5em;
   background: linear-gradient(to right, #995363, #551020);
-  box-shadow: 4px 5px 2px 1px #664400;
   input, p {
     margin: .5em;
     width: 20em;
@@ -26,5 +28,6 @@ h1 {
     margin-left: 8em;
     width: 10em;
     background-color: white;
+    color: $burgundy;
   }
 }
