@@ -1,3 +1,4 @@
+<div style="margin: 0 auto: width: 100%; display: block; text-align: center;">
 <%= form_for(@challenge) do |f| %>
   <% if @challenge.errors.any? %>
     <div id="error_explanation">
@@ -20,12 +21,8 @@
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :video %><br>
-    <%= f.text_field :video %>
+    <%= f.label :image_id %><br>
+    <input style="margin: 0 auto;" type="file" accept="image/*" capture="camera">
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
@@ -35,3 +32,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
