@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$gold : #FFB612;
+$burgundy : #773141;
+
 /* universal */
    
 body {
@@ -56,7 +59,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #FFB612;
+  color: $gold;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -64,14 +67,14 @@ p {
 }
 
 #logo:hover {
-  color: #FFFFFF;
+  color: $gold;
   text-decoration: none;
-  background-color: #773141;
+  background-color: $burgundy;
 }
 
 /* navbar */
 .navbar  {
-    background-color: #773141;
+    background-color: $burgundy;
     border-color: #E7E7E7;
 }
 
