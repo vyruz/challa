@@ -1,0 +1,30 @@
+h1 {
+  padding-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.signIn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30em;
+  background-color: #EEEEEE;
+  z-index: 3;
+  padding: 2em;
+  border-radius: 5em;
+  background: linear-gradient(to right, #995363, #551020);
+  box-shadow: 4px 5px 2px 1px #664400;
+  input, p {
+    margin: .5em;
+    width: 20em;
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+  .logIn, a {
+    color: #FFB400;
+  }
+  .logIn {
+    margin-left: 8em;
+    width: 10em;
+    background-color: white;
+  }
+}
