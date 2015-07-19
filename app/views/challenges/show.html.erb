@@ -9,15 +9,14 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @challenge.image_id %>
-</p>
-
-<p>
   <strong>Category:</strong>
   <%= category_name %>
 </p>
+
+<p>
+  <img style="max-height: 600px; max-width: 600px;"  src="<%= @challenge.image_path %>">
+</p>
 </center>
-<div class="accept_challenge_button">
+<div class="accept_challenge_button" style="margin: 0 auto; width: 100%; display: block; text-align: center; padding-right: 0">
 <%= link_to 'Accept', 'challeges#accept' %>
 </div>
