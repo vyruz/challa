@@ -1,5 +1,5 @@
 class ChallengesController < ApplicationController
-  before_filter :set_category
+  before_filter :set_category, :authenticate
   before_action :set_challenge, only: [:show, :edit, :update, :destroy]
 
   # GET /categories/:category_id/challenges

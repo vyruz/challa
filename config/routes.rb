@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resources :sessions, only: [:new, :create, :destroy]
   match '/signup', to: 'users#new',            via: 'get'
   match '/login', to: 'sessions#new',          via: 'get'
+  match '/login', to: 'sessions#create',       via: 'post'
   match '/logout', to: 'sessions#destroy',     via: 'delete'
+  match '/home', to: 'welcome#show',           via: 'get'
   resources :users
   resources :categories do
     resources :challenges
