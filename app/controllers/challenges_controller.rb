@@ -1,10 +1,11 @@
 class ChallengesController < ApplicationController
+  before_filter :set_category
   before_action :set_challenge, only: [:show, :edit, :update, :destroy]
 
-  # GET /challenges
-  # GET /challenges.json
+  # GET /categories/:category_id/challenges
+  # GET /categories/:category_id/challenges.json
   def index
-    @challenges = Challenge.all
+    @challenges = Challenge.where(:category_id => @category)
   end
 
   # GET /challenges/1
@@ -65,6 +66,9 @@ class ChallengesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_challenge
       @challenge = Challenge.find(params[:id])
+    end
+    def set_category
+      @category = Category.find(params[:category_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
