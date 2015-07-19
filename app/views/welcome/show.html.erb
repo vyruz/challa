@@ -18,9 +18,11 @@
   <% @challenges.each do |challenge| %>
     <article><h3><%= challenge.name %></h3>
     <p><%= challenge.description %></p>
-      <span>
+      <span id="take">
       <%= link_to 'Take the Challenge!', category_challenge_path(1, challenge) %>
-      Category:<%= link_to 'humanitarian', category_path(1) %>
+      </span>
+      <span id="category">
+      Category: <%= link_to 'humanitarian', category_path(1) %>
       </span></article>
   <% end %>
 </div>
