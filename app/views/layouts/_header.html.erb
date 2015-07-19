@@ -6,7 +6,7 @@
       <ul class="nav navbar-nav navbar-right">
 	<% if session[:user_id] %>
       	  <li><%= link_to "Challenge me!", '#' %></li>
-      	  <li><%= link_to "Log out", '/logout' %></li>
+      	  <li><%= link_to "Log out", '/logout', method: :delete %></li>
 	<% else %>
 	  <li><%= link_to "Sign up", '/signup' %></li>
 	  <li><%= link_to "Log in", '/login' %></li>
