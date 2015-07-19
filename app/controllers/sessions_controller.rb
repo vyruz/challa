@@ -25,4 +25,5 @@ class SessionsController < ApplicationController
   def session_params
     params[:session]
   end
+
 end

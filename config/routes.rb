@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   match '/signup', to: 'users#new',            via: 'get'
   match '/login', to: 'sessions#new',          via: 'get'
   match '/login', to: 'sessions#create',       via: 'post'
+  # match '/logout', to: 'sessions#destroy',     via: 'get'
   match '/logout', to: 'sessions#destroy',     via: 'delete'
   match '/home', to: 'welcome#show',           via: 'get'
   resources :users
