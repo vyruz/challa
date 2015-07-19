@@ -45,18 +45,20 @@ body::after {
     margin-right: 0 auto;
     height: 500px;
     width: 600px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 .blurb {
     position: absolute;
-    bottom: 30%;
+    bottom: 25%;
     width: 100%;
     font-size: 300%;
-    color: #333377;
+    color: #773141;
     text-align: center;
     display: block;
     margin: 0 auto;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
 }
 
 .buttonHolder {
