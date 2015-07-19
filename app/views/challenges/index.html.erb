@@ -1,35 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Challenges</h1>
+<h2><%= category %> challenges</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>Video</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
+<table class="challenge_table">
   <tbody>
     <% @challenges.each do |challenge| %>
       <tr>
-        <td><%= challenge.name %></td>
-        <td><%= challenge.description %></td>
-        <td><%= challenge.image %></td>
-        <td><%= challenge.video %></td>
-        <td><%= challenge.category_id %></td>
+        <td class="challenge_thumbnail">
+            <img src="<%= challenge.image_id %>"></td>
+        <td class="challenge_info">
+            <div style="font-size: 150%">
+                <strong><%= challenge.name %></strong>
+            </div><div>
+                <p><%= challenge.description %></p>
+            </div><div>
+                <p>Bounty: Who fuckin knows?<p>
+            </div>
+        </td>
         <td><%= link_to 'Show', category_challenge_path(@category, challenge) %></td>
+        <!--
         <td><%= link_to 'Edit', edit_category_challenge_path(@category, challenge) %></td>
         <td><%= link_to 'Destroy', category_challenge_path(category_id: @category.id, id: challenge.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        -->
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Challenge', new_category_challenge_path(category_id: @category.id) %>
+<div class="new_challenge_button">
+   <%= link_to 'Create Challenge', new_category_challenge_path(category_id: @category.id) %>
+</div>
