@@ -12,6 +12,7 @@ body {
     width: 100%;
     line-height: default;
     padding-top: 60px;
+    background: url('/assets/tightrope.jpg') no-repeat center center fixed;
 }
 
 body::after {
@@ -21,7 +22,7 @@ body::after {
     bottom: 0;
     right: 0;
     left: 0;
-    background: url('/assets/tightrope.jpg');
+    background-size: 100%;
     background-size: cover;
     opacity: 0.4;
     z-index: -1;
