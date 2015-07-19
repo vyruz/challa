@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150718231316) do
+ActiveRecord::Schema.define(version: 20150719180043) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,28 +33,36 @@ ActiveRecord::Schema.define(version: 20150718231316) do
   create_table "challenges", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.string   "image"
-    t.string   "video"
+    t.integer  "image_id"
     t.integer  "category_id"
-    t.integer  "bounty_total"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.integer  "challenge_id", null: false
+    t.string   "filename",     null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
   create_table "user_challenges", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id",      null: false
+    t.integer  "challenge_id", null: false
+    t.string   "status",       null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "username"
     t.string   "password_digest"
-    t.string   "role"
+    t.string   "role",            default: "challenger"
     t.integer  "points",          default: 0
     t.string   "image"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
 end
