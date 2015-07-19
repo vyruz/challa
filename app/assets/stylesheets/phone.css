@@ -21,8 +21,6 @@ body::after {
     bottom: 0;
     right: 0;
     left: 0;
-    background: url('/assets/K2.jpg');
-    background-size: cover;
     opacity: 0.3;
     z-index: -1;
 }
