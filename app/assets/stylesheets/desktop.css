@@ -45,8 +45,8 @@ body::after {
     margin-right: 0 auto;
     height: 500px;
     width: 600px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 0px;
 }
 
 .blurb {
