@@ -22,7 +22,7 @@ profile = Challenge.create!(name: 'Complete your profile', description: 'Congrat
 
 flag = Challenge.create!(name: 'Climb a Flag Pole', description: 'If you can climb a flag pole that is at least 10 feet high then Upload a video to redeem the points.', category_id: categories[4].id)
 
-mabel = Challenge.create!(name: 'Help Mabel fix her roof', description: 'Mabel Ruthridge is a 72 year old lifelong resident of Pleasantville, and she has a leak in her roof. She cannot afford repairs on her Social Security income.  Lets help her!' category_id: categories[1].id)
+mabel = Challenge.create!(name: 'Help Mabel fix her roof', description: 'Mabel Ruthridge is a 72 year old lifelong resident of Pleasantville, and she has a leak in her roof. She cannot afford repairs on her Social Security income.  Lets help her!', category_id: categories[1].id)
 
 haiti = Challenge.create!(name: 'Water filters for Haiti', description: "Access to clean drinking water is a major problem facing the residents of Haiti. Let's pull together " \
 'to provide 100 water filters. The filters cost $60 each.')
@@ -31,22 +31,22 @@ runner = Challenge.create!(name: 'Run a half marathon with Mom!', description: '
 
 puppy = Challenge.create!(name: 'Find homes for 50 rescue animals.', description: 'We want to find a good home for 50 pets from the animal shelter. Visit the shelter if possible, take pictures and post on social media.', category_id: categories[1].id)
 
-pizza = challenge.create!(name: 'Procure a ginormous pizza!', description: 'Any intern who procures a pizza over 24 inches in diameter wins this challenge!', category_id: categories[2].id)
+pizza = Challenge.create!(name: 'Procure a ginormous pizza!', description: 'Any intern who procures a pizza over 24 inches in diameter wins this challenge!', category_id: categories[2].id)
 
-stopCoding = challenge.create!(name: 'Stop coding and go outside!', description: 'Last one to the beach is a rotten egg...', category_id: categories[2].id)
+stopCoding = Challenge.create!(name: 'Stop coding and go outside!', description: 'Last one to the beach is a rotten egg...', category_id: categories[2].id)
 
-math = challenge.create!(name: 'Learn to multiply', description: 'I challenge Luke Skywalker to learn simple multiplication tables.', category_id: categories[0].id)
+math = Challenge.create!(name: 'Learn to multiply', description: 'I challenge Luke Skywalker to learn simple multiplication tables.', category_id: categories[0].id)
 
 # image = image.create!(challenge_id: profile.id, image: 'puppy.png')
-puppyPic = image.create!(challenge_id: puppy.id, image: 'puppy.png')
-profilePic = image.create!(challenge_id: profile.id, image: 'profile.png')
-haitiPic = image.create!(challenge_id: haiti.id, image: 'haiti.png')
-flagPic = image.create!(challenge_id: flag.id, image: 'flag.png')
-mabelPic = image.create!(challenge_id: mabel.id, image: 'mabel.png')
-runnerPic = image.create!(challenge_id: runner.id, image: 'runners.png')
-pizzaPic = image.create!(challenge_id: pizza.id, image: 'pizza.png')
-beachPic = image.create!(challenge_id: stopCoding.id, image: 'surf.png')
-multiplyPic = image.create(challenge_id: math.id, image: 'multiply.png')
+puppyPic = Image.create!(challenge_id: puppy.id, filename: 'puppy.png')
+profilePic = Image.create!(challenge_id: profile.id, filename: 'profile.png')
+haitiPic = Image.create!(challenge_id: haiti.id, filename: 'haiti.png')
+flagPic = Image.create!(challenge_id: flag.id, filename: 'flagpole.png')
+mabelPic = Image.create!(challenge_id: mabel.id, filename: 'mabel.png')
+runnerPic = Image.create!(challenge_id: runner.id, filename: 'runners.png')
+pizzaPic = Image.create!(challenge_id: pizza.id, filename: 'pizza.png')
+beachPic = Image.create!(challenge_id: stopCoding.id, filename: 'surf.png')
+multiplyPic = Image.create(challenge_id: math.id, filename: 'multiply.png')
 
 
 # bounty = Bounty.create!(challenge_id: x.id, user_idsam.id, points: 50)
