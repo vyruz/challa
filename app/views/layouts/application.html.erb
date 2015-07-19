@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Challenges</title>
+  <title>Challa</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,7 +9,7 @@
 <body>
 <%= render "layouts/header" %>
 <%= yield %>
-<% if session[:user_id] %>
+<% if current_user %>
   <%= render "layouts/footer" %>
 <% end %>
 </body>

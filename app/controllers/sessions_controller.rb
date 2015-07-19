@@ -18,12 +18,11 @@ class SessionsController < ApplicationController
   # DELETE /sessions/1
   # DELETE /sessions/1.json
   def destroy
-    session[:user_id] = nil
-    redirect_to root_url(notice: "You have successfull signed out")
   end
 
     # Never trust parameters from the scary internet, only allow the white list through.
   def session_params
     params[:session]
   end
+
 end
