@@ -71,6 +71,10 @@ class ChallengesController < ApplicationController
     end
   end
 
+  def category_name
+    @category ||= Category.find(@challenge.category_id).name
+  end
+  helper_method :category_name
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_challenge
