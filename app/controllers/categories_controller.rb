@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    redirect_to :controller => "challenges", :action => "index", category_id: @category.id
   end
 
   # GET /categories/new

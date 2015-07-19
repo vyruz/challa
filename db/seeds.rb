@@ -5,6 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-users = User.create([{ username: 'Tester', email: 'tester@testing.com'}])
-catagories = Category.create([{name: 'Education'}, {name: 'Humanitarian'}])
-challenges = Challenge.create([{name: 'test challenge 1', description: " it's just a test", category_id: catagories.first}])
+users = User.create!([{ username: 'Tester', email: 'tester@testing.com', points: 0}])
+catagories = Category.create!([{name: 'Education'}, {name: 'Humanitarian'}])
+challenges = Challenge.create!([{name: 'test challenge 1', description: " it's just a test", category_id: catagories.first}])
