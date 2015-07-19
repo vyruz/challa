@@ -3,7 +3,11 @@
     <%= link_to "Challa", '#', id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Log in", '#' %></li>
+	<% if current_user %>
+      	  <li><%= link_to "Log out", '/logout' %></li>
+	<% else %>
+	  <li><%= link_to "Log in", '/login' %></li>
+	<% end %>
       </ul>
     </nav>
   </div>
