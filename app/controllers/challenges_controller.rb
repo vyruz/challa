@@ -6,6 +6,10 @@ class ChallengesController < ApplicationController
   # GET /categories/:category_id/challenges.json
   def index
     @challenges = Challenge.where(:category_id => @category)
+    @challenges.each do |c|
+        c.bounty_total = 100
+        c.image_path = '/assets/test.png'
+    end
     render "index", :locals => {:category => @category.name}
   end
 
