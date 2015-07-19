@@ -69,7 +69,8 @@ class ChallengesController < ApplicationController
       @challenge = Challenge.find(params[:id])
     end
     def set_category
-      @category = Category.find(params[:category_id])
+      return unless params[:category_id]
+      @category ||= Category.find(params[:category_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
