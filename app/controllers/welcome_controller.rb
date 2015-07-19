@@ -9,6 +9,7 @@ class WelcomeController < ApplicationController
   def show
     @user = User.where(id: session[:user_id]).first
     @challenges = Challenge.all
-    @user_challenges = Challenge.where(user_id: @user.id)
+    @user_challenges = @user.user_challenges
+    @completed = Challenge.where(id: @user_challenges.where(status: "completed"))
   end
 end
