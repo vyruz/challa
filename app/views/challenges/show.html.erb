@@ -1,11 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <div class="pagetitle"> <%= @challenge.name %> </div>
-<p>
-  <strong>Name:</strong>
 
-</p>
-
+<center>
 <p>
   <strong>Description:</strong>
   <%= @challenge.description %>
@@ -18,5 +15,9 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @challenge.category_id %>
+  <%= category_name %>
 </p>
+</center>
+<div class="accept_challenge_button">
+<%= link_to 'Accept', 'challeges#accept' %>
+</div>

@@ -7,8 +7,9 @@ class ChallengesController < ApplicationController
   def index
     @challenges = Challenge.where(:category_id => @category)
     @challenges.each do |c|
-        c.bounty_total = 100
-        c.image_path = '/assets/test.png'
+        b = Bounty.where('challenge_id': c.id).take
+        c.bounty_total = b.points
+        c.image_path = Image.where('challenge_id': c.id).take.filename
     end
     render "index", :locals => {:category => @category.name}
   end
@@ -25,6 +26,9 @@ class ChallengesController < ApplicationController
 
   # GET /challenges/1/edit
   def edit
+  end
+
+  def accept
   end
 
   # POST /challenges
@@ -67,6 +71,11 @@ class ChallengesController < ApplicationController
     end
   end
 
+  def category_name
+    return unless @challenge.category_id
+    @category ||= Category.find(@challenge.category_id).name
+  end
+  helper_method :category_name
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_challenge
