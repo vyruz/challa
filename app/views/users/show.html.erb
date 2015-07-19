@@ -13,8 +13,9 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @user.image %>
+  <% if @user.image %>
+  <img style="max-height: 600px; max-width: 600px;"  src=<%= "/assets/"+@user.image %>>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

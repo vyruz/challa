@@ -24,7 +24,7 @@ class ChallengesController < ApplicationController
         render "show", :locals => {:category_name => @category.name}
       end
     else
-      @challenge.image_path = "assets/images/profile.png"
+      @challenge.image_path = "profile.png"
     end
 
   end
