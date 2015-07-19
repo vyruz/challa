@@ -7,14 +7,14 @@
     <% @challenges.each do |challenge| %>
       <tr>
         <td class="challenge_thumbnail">
-            <img src="<%= challenge.image_id %>"></td>
+            <img src="<%= challenge.image_path %>"></td>
         <td class="challenge_info">
             <div style="font-size: 150%">
                 <strong><%= challenge.name %></strong>
             </div><div>
-                <p><%= challenge.description %></p>
+                <p>Description: <%= challenge.description %></p>
             </div><div>
-                <p>Bounty: Who fuckin knows?<p>
+                <p>Bounty: <%= challenge.bounty_total %><p>
             </div>
         </td>
         <td><%= link_to 'Show', category_challenge_path(@category, challenge) %></td>
