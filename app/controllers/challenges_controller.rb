@@ -6,6 +6,7 @@ class ChallengesController < ApplicationController
   # GET /categories/:category_id/challenges.json
   def index
     @challenges = Challenge.where(:category_id => @category)
+    render "index", :locals => {:category => @category.name}
   end
 
   # GET /challenges/1
