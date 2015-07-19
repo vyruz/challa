@@ -34,7 +34,9 @@ runner = challenge.create!(name: 'Run a half marathon with Mom!', description: '
 winner_id: sam.id)
 
 puppy = challenge.create!(name: 'Find homes for 50 rescue animals.', description: 'We want to find a good home for 50 pets from the animal shelter. Visit the shelter if possible, \
-'take pictures and post on social media.', )
+'take pictures and post on social media.', image: puppy.png, user_id: thenuge.id)
+
+math = challenge.create!(name: 'Learn multiplication', description: 'I challenge Jerry to memorize multiples of numbers 1 thru 9.', image: 'multiply.png', user_id: theforce.id)
 
 
 
