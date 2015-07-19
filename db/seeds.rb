@@ -35,6 +35,8 @@ pizza = challenge.create!(name: 'Procure a ginormous pizza!', description: 'Any 
 
 stopCoding = challenge.create!(name: 'Stop coding and go outside!', description: 'Last one to the beach is a rotten egg...', category_id: categories[2].id)
 
+math = challenge.create!(name: 'Learn to multiply', description: 'I challenge Luke Skywalker to learn simple multiplication tables.', category_id: categories[0].id)
+
 # image = image.create!(challenge_id: profile.id, image: 'puppy.png')
 puppyPic = image.create!(challenge_id: puppy.id, image: 'puppy.png')
 profilePic = image.create!(challenge_id: profile.id, image: 'profile.png')
@@ -44,6 +46,7 @@ mabelPic = image.create!(challenge_id: mabel.id, image: 'mabel.png')
 runnerPic = image.create!(challenge_id: runner.id, image: 'runner.png')
 pizzaPic = image.create!(challenge_id: pizza.id, image: 'pizza.png')
 beachPic = image.create!(challenge_id: stopCoding.id, image: 'surf.png')
+multiplyPic = image.create(challenge_id: math.id, image: 'multiply.png')
 
 
 # bounty = Bounty.create!(challenge_id: x.id, user_idsam.id, points: 50)
