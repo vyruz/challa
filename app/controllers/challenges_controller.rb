@@ -6,6 +6,11 @@ class ChallengesController < ApplicationController
   # GET /categories/:category_id/challenges.json
   def index
     @challenges = Challenge.where(:category_id => @category)
+    @challenges.each do |c|
+        c.bounty_total = 100
+        c.image_path = '/assets/test.png'
+    end
+    render "index", :locals => {:category => @category.name}
   end
 
   # GET /challenges/1
@@ -68,7 +73,8 @@ class ChallengesController < ApplicationController
       @challenge = Challenge.find(params[:id])
     end
     def set_category
-      @category = Category.find(params[:category_id])
+      return unless params[:category_id]
+      @category ||= Category.find(params[:category_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

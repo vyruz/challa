@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<div class="pagetitle"> <%= @challenge.name %> </div>
 <p>
   <strong>Name:</strong>
-  <%= @challenge.name %>
+
 </p>
 
 <p>
@@ -12,18 +13,10 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @challenge.image %>
-</p>
-
-<p>
-  <strong>Video:</strong>
-  <%= @challenge.video %>
+  <%= @challenge.image_id %>
 </p>
 
 <p>
   <strong>Category:</strong>
   <%= @challenge.category_id %>
 </p>
-
-<%= link_to 'Edit', edit_challenge_path(@challenge) %> |
-<%= link_to 'Back', challenges_path %>
