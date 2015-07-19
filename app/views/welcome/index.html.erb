@@ -1,5 +1,9 @@
 <%= stylesheet_link_tag "desktop.css", media: "(min-device-width:600px)" %>
-
+<% if params[:notice] %>
+  <div id="notice">
+	  <p><%= params[:notice] %></p>
+  </div>
+<% end %>
 <div class="title">
   <%= image_tag "hipsterlogo.png" %>
 </div>
