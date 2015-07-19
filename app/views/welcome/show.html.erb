@@ -1,9 +1,27 @@
 <%= stylesheet_link_tag "desktop.css", media: "(min-device-width:600px)" %>
 
 <div class="title">
-<%= image_tag "hipsterlogo.png" %>
+<%= image_tag "hipsterlogo.png", id: "welcome"%>
 </div>
-<div class="blurb">Complete challenges to earn points and make the world a better place</div>
-<div class="buttonHolder">
-<a href="signup">Let's Go!</a>
+<div class="left"><p>Recently Completed:
+  <% if @completed %>
+    <ul>
+    <% @user_challenges.each do |challenge| %>  
+      <li><%= link_to challenge.name, category_challenge_path(challenge.category_id, challenge) %></li>
+    <% end %>
+   </ul>
+  <% end %>
+</p>
 </div>
+<div class="main">
+  <h1>Challenges Available</h1>
+  <% @challenges.each do |challenge| %>
+    <article><h3><%= challenge.name %></h3>
+    <p><%= challenge.description %></p>
+      <span>
+      <%= link_to 'Take the Challenge!', category_challenge_path(1, challenge) %>
+      Category:<%= link_to 'humanitarian', category_path(1) %>
+      </span></article>
+  <% end %>
+</div>
+      

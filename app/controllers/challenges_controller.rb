@@ -8,8 +8,17 @@ class ChallengesController < ApplicationController
     @challenges = Challenge.where(:category_id => @category)
     @challenges.each do |c|
         b = Bounty.where('challenge_id': c.id).take
-        c.bounty_total = b.points
-        c.image_path = Image.where('challenge_id': c.id).take.filename
+        if b
+            c.bounty_total = b.points
+        else
+            c.bounty_total = -1
+        end
+        i = Image.where('challenge_id': c.id).take
+        if i
+           c.image_path = i.filename
+        else
+           c.image_path = "/assets/noimg.jpg"
+        end
     end
     render "index", :locals => {:category => @category.name}
   end
