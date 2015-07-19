@@ -34,3 +34,46 @@
   </div>
 </center>
 <% end %>
+<div style="margin: 0 auto: width: 100%; display: block; text-align: center;">
+<%= form_for(@challenge) do |f| %>
+  <% if @challenge.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h2>
+
+      <ul>
+      <% @challenge.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<center>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+<<<<<<< HEAD
+    <%= f.label :image %><br>
+    <%= f.text_field :image_path %>
+=======
+    <%= f.label :image_id %><br>
+    <input style="margin: 0 auto;" type="file" accept="image/*" capture="camera">
+>>>>>>> 06aac30ea0102c107041e8ce0c608df7338f18a8
+  </div>
+
+  <div class="field">
+    <%= f.label :category_id %><br>
+    <%= f.text_field :category_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</center>
+<% end %>
+</div>
