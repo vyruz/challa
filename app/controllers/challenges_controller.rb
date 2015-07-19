@@ -72,6 +72,7 @@ class ChallengesController < ApplicationController
   end
 
   def category_name
+    return unless @challenge.category_id
     @category ||= Category.find(@challenge.category_id).name
   end
   helper_method :category_name
