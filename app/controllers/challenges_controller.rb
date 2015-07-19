@@ -7,8 +7,9 @@ class ChallengesController < ApplicationController
   def index
     @challenges = Challenge.where(:category_id => @category)
     @challenges.each do |c|
-        c.bounty_total = 100
-        c.image_path = '/assets/test.png'
+        b = Bounty.where('challenge_id': c.id).take
+        c.bounty_total = b.points
+        c.image_path = Image.where('challenge_id': c.id).take.filename
     end
     render "index", :locals => {:category => @category.name}
   end
