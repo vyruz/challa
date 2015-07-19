@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   match '/login', to: 'sessions#create',       via: 'post'
   match '/logout', to: 'sessions#destroy',     via: 'delete'
   match '/home', to: 'welcome#show',           via: 'get'
+  match '/accept', to: 'accept#index',         via: 'get'
   resources :users
   resources :challenges   
   resources :categories do
