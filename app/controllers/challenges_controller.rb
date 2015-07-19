@@ -17,8 +17,16 @@ class ChallengesController < ApplicationController
   # GET /challenges/1
   # GET /challenges/1.json
   def show
-    @challenge.image_path = Image.where('challenge_id': @challenge.id).take.filename
-    render "show", :locals => {:category_name => @category.name}
+    image = Image.where('challenge_id': @challenge.id).first
+    if image
+      @challenge.image_path = image.filename
+      if @category
+        render "show", :locals => {:category_name => @category.name}
+      end
+    else
+      @challenge.image_path = "assets/images/profile.png"
+    end
+
   end
 
   # GET /challenges/new
